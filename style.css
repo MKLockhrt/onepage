@@ -1,0 +1,245 @@
+body {
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+}
+
+.c-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(15px);
+    background: rgba(0, 0, 0, 0.6);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-viewport {
+    height: 150vh;
+    position: relative;
+}
+
+.header-fixed {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    pointer-events: none;
+    width: min(1200px, 100%);
+}
+
+.split-title {
+    font-size: clamp(2.5rem, 10vw, 7rem);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    line-height: 0.95;
+}
+
+.char-box {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    padding: 0 0.02em;
+}
+
+.char {
+    display: inline-block;
+    will-change: transform, opacity, filter;
+}
+
+.spacer {
+    width: 0.4em;
+    display: inline-block;
+}
+
+.lead-text {
+    max-width: 760px;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.section-space {
+    padding: 6rem 0;
+}
+
+.card,
+.form-control,
+.btn {
+    border-radius: 0 !important;
+}
+
+.card {
+    background: #050505;
+    border: 1px solid #222;
+    color: #fff;
+}
+
+.form-control {
+    background: #000;
+    border-color: #333;
+    color: #fff;
+}
+
+.form-control::placeholder {
+    color: #777;
+}
+
+.form-control:focus {
+    background: #050505;
+    color: #fff;
+    border-color: #fff;
+    box-shadow: none;
+}
+
+.custom-badge {
+    background: transparent;
+    border: 1px solid #444;
+    color: #aaa;
+    border-radius: 0 !important;
+}
+
+.text-body-secondary-custom {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.header-meta {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.header-location {
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+}
+
+.c-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 4rem 0 2rem;
+    margin-top: 4rem;
+}
+
+.footer-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.footer-copyright {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #fff;
+    opacity: 0.8;
+}
+
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    transition: opacity 0.3s;
+}
+
+.footer-link:hover {
+    opacity: 0.5;
+    color: #fff;
+}
+
+@media (max-width: 991.98px) {
+    .hero-viewport {
+        height: 100vh;
+    }
+
+    .header-fixed {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .section-space {
+        padding: 4rem 0;
+    }
+}
+
+.navbar-brand {
+    color: #fff;
+    letter-spacing: 0.12em;
+}
+
+.navbar-brand:hover {
+    color: #fff;
+    opacity: 0.8;
+}
+
+.social-icon {
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: #fff;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    transition: opacity 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon {
+    color: #fff;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #fff;
+    opacity: 0.75;
+    transform: translateY(-1px);
+}
+
+.hero-viewport.hero-image-bg {
+    height: 100vh;
+    position: relative;
+    background-image: url("perth.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.18) 0%,
+            rgba(0, 0, 0, 0.28) 35%,
+            rgba(0, 0, 0, 0.52) 100%);
+    z-index: 1;
+}
+
+.header-fixed {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    pointer-events: none;
+    width: min(1200px, 100%);
+}
+
+.hero-viewport::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 120px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000);
+    z-index: 1;
+}
